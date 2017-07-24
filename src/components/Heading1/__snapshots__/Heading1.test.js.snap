@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render 1`] = `
+<div
+  className="myCenter"
+>
+  <h1>
+    Welcome to your Shopping List
+  </h1>
+  <h2>
+    Select shopping list(s)
+  </h2>
+</div>
+`;
