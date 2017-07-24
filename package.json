@@ -37,5 +37,8 @@
     "moduleNameMapper": {
       "\\.css$": "identity-obj-proxy"
     }
+  },
+  "dependencies": {
+    "material-ui": "^0.18.7"
   }
 }
