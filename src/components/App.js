@@ -14,15 +14,18 @@ class App extends React.Component {
       lists: []
     }
   }
-  addList = (list) => {
-    console.log('addList', list)
+  addList = (e) => {
+    console.log('addList', e.target.innerText)
+    const temp = this.state.lists
+    temp.push(e.target.innerText)
+    this.setState({lists: temp})
   }
   render () {
     return (
       <div>
         <Heading1 />
         <Lists 
-          addList={() => this.addList() } 
+          addList={this.addList} 
           lists={listNames}
         />
       </div>

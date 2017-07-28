@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   module: {
     rules: [ {
       enforce: 'pre',
