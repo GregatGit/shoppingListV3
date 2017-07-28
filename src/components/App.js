@@ -16,9 +16,12 @@ class App extends React.Component {
   }
   addList = (e) => {
     console.log('addList', e.target.innerText)
-    const temp = this.state.lists
-    temp.push(e.target.innerText)
-    this.setState({lists: temp})
+    const tempArrList = this.state.lists
+    let newList = e.target.innerText
+    if (tempArrList.indexOf(newList) === -1){
+      tempArrList.push(newList)
+      this.setState({lists: tempArrList})
+    }
   }
   render () {
     return (

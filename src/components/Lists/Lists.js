@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Lists = ({lists, addList}) => {
-  console.log('addlist', addList)
   const data = lists.map((name, index) => {
     return (
       <div key={index}>
