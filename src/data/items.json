@@ -1,0 +1,74 @@
+[
+  {
+    "list": "list one",
+    "items": [
+      {
+        "item": "apples",
+        "category": "produce",
+        "store": "fruit_market",
+        "weekly": false,
+        "price": null
+      },
+      {
+        "item": "oranges",
+        "category": "produce",
+        "store": "fruit_market",
+        "weekly": false,
+        "price": null
+      },
+      {
+        "item": "milk",
+        "category": "dairy",
+        "store": "Coles",
+        "weekly": true,
+        "price": null
+      },
+      {
+        "item": "cheese",
+        "category": "dairy",
+        "store": "Aldi",
+        "weekly": false,
+        "price":null
+      },
+      {
+        "item": "tomatoes",
+        "category": "produce",
+        "store": "fruit_market",
+        "weekly": true,
+        "price": null
+      },
+      {
+        "item": "chicken legs",
+        "category": "meat",
+        "store": "Aldi",
+        "weekly": true,
+        "price": null
+      }
+    ]
+  },
+  {
+    "list": "list two",
+    "items": [
+      {
+        "item": "flour",
+        "category": "baking",
+        "store": "Aldi",
+        "weekly": false,
+        "price": null
+      },
+      {
+        "item": "rice",
+        "category": "grains",
+        "store": "Aldi",
+        "weekly": false 
+      },
+      {
+        "item": "sugar",
+        "category": "baking",
+        "store": "Aldi",
+        "weekly": false,
+        "price": null
+      }
+    ]
+  }
+]
