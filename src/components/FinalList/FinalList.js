@@ -1,4 +1,5 @@
 import React from 'react'
+import items from '../../data/items.json'
 
 class FinalList extends React.Component {
   constructor (props) {
