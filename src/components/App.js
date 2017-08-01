@@ -2,9 +2,9 @@ import React from 'react'
 import Heading1 from '../components/Heading1/Heading1'
 import Lists from './Lists/Lists'
 import items from '../data/items.json'
-console.log(items)
+import FinalList from './FinalList/FinalList'
+
 const listNames = items.map(list => list.list)
-console.log(listNames)
 
 class App extends React.Component {
   constructor (props) {
@@ -24,13 +24,16 @@ class App extends React.Component {
     }
   }
   render () {
+    
     return (
       <div>
         <Heading1 />
-        <Lists 
+        {!this.state.shoppingListReady ? (
+          <Lists 
           addList={this.addList} 
           lists={listNames}
         />
+        ) : (<FinalList lists={this.state.lists} />)}
       </div>
     )
   }
