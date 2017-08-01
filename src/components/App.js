@@ -3,6 +3,7 @@ import Heading1 from '../components/Heading1/Heading1'
 import Lists from './Lists/Lists'
 import items from '../data/items.json'
 import FinalList from './FinalList/FinalList'
+import FloatingActionButton from './Button/FloatingActionButton'
 
 const listNames = items.map(list => list.list)
 
@@ -38,7 +39,7 @@ class App extends React.Component {
               addList={this.addList} 
               lists={listNames}
             />
-            <button onClick={this.toggleListIsReady}>Done</button>
+            <FloatingActionButton label='DONE' function={this.toggleListIsReady} />
           </div>
         ) : (<FinalList lists={this.state.lists} />)}
       </div>

@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-const Index = ()=> (
+const Index = () => (
   <MuiThemeProvider>
     <App />
   </MuiThemeProvider>
