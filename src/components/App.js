@@ -23,16 +23,23 @@ class App extends React.Component {
       this.setState({lists: tempArrList})
     }
   }
+  toggleListIsReady = () => {
+    let temp = !this.state.shoppingListReady
+    this.setState({shoppingListReady: temp})
+  }
   render () {
     
     return (
       <div>
         <Heading1 />
         {!this.state.shoppingListReady ? (
-          <Lists 
-          addList={this.addList} 
-          lists={listNames}
-        />
+          <div>
+            <Lists 
+              addList={this.addList} 
+              lists={listNames}
+            />
+            <button onClick={this.toggleListIsReady}>Done</button>
+          </div>
         ) : (<FinalList lists={this.state.lists} />)}
       </div>
     )
