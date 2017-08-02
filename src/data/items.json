@@ -1,6 +1,6 @@
 [
   {
-    "list": "list one",
+    "listName": "list one",
     "items": [
       {
         "item": "apples",
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "list": "list two",
+    "listName": "list two",
     "items": [
       {
         "item": "flour",

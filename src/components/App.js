@@ -5,7 +5,7 @@ import items from '../data/items.json'
 import FinalList from './FinalList/FinalList'
 import FloatingActionButton from './Button/FloatingActionButton'
 
-const listNames = items.map(list => list.list)
+const listNames = items.map(list => list.listName)
 
 class App extends React.Component {
   constructor (props) {
@@ -29,7 +29,6 @@ class App extends React.Component {
     this.setState({shoppingListReady: temp})
   }
   render () {
-    
     return (
       <div>
         <Heading1 />
@@ -41,7 +40,10 @@ class App extends React.Component {
             />
             <FloatingActionButton label='DONE' function={this.toggleListIsReady} />
           </div>
-        ) : (<FinalList lists={this.state.lists} />)}
+        ) : (<FinalList 
+                lists={this.state.lists} 
+                items={items}
+              />)}
       </div>
     )
   }

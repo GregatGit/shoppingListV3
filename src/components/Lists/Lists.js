@@ -1,10 +1,11 @@
 import React from 'react'
+import FlatButtonSimple from '../Button/FlatButton'
 
 const Lists = ({lists, addList}) => {
   const data = lists.map((name, index) => {
     return (
       <div key={index}>
-        <button onClick={addList}>{name}</button>
+        <FlatButtonSimple function={addList} name={name} />
       </div>
     )
   })

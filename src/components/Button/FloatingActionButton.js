@@ -8,7 +8,7 @@ const style = {
 
 const myFloatingActionButton = (props) => (
   <FloatingActionButton style={style} onClick={props.function} >
-    <ContentAdd />
+    GO!
   </FloatingActionButton>
 )
 

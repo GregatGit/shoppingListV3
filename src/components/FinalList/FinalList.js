@@ -1,5 +1,11 @@
 import React from 'react'
-// import items from '../../data/items.json'
+import {List, ListItem} from 'material-ui/List'
+import ContentInbox from 'material-ui/svg-icons/content/inbox'
+import ActionGrade from 'material-ui/svg-icons/action/grade'
+import ContentSend from 'material-ui/svg-icons/content/send'
+import ContentDrafts from 'material-ui/svg-icons/content/drafts'
+import Divider from 'material-ui/Divider'
+import ActionInfo from 'material-ui/svg-icons/action/info'
 
 class FinalList extends React.Component {
   constructor (props) {
@@ -8,11 +14,33 @@ class FinalList extends React.Component {
       temp: []
     }
   }
+  makeListItem (item) {
+    return (
+      <ListItem primaryText={item.item} rightIcon={< ActionInfo />} />
+    )
+  }
   render () {
-    console.log(this.props.lists)
+    console.log(this.props.items[0].items)
     return (
       <div>
-        I'm a list
+        <List>
+          <ListItem primaryText='Inbox' leftIcon={< ContentInbox />} />
+          <ListItem primaryText='Starred' leftIcon={< ActionGrade />} />
+          <ListItem primaryText='Sent mail' leftIcon={< ContentSend />} />
+          <ListItem primaryText='Drafts' leftIcon={< ContentDrafts />} />
+          <ListItem primaryText='Inbox' leftIcon={< ContentInbox />} />
+        </List>
+        <Divider />
+        <List>
+          <ListItem primaryText='All mail' rightIcon={< ActionInfo />} />
+          <ListItem primaryText='Trash' rightIcon={< ActionInfo />} />
+          <ListItem primaryText='Spam' rightIcon={< ActionInfo />} />
+          <ListItem primaryText='Follow up' rightIcon={< ActionInfo />} />
+        </List>
+        <Divider />
+        <List>
+          { this.props.items[0].items.map(this.makeListItem)}
+        </List>
       </div>
     )
   }
