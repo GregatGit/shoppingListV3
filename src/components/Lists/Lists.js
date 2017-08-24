@@ -1,11 +1,11 @@
 import React from 'react'
 import FlatButtonSimple from '../Button/FlatButton'
 
-const Lists = ({lists, addList}) => {
-  const data = lists.map((name, index) => {
+const Lists = (props) => {
+  const data = props.lists.map((name, index) => {
     return (
       <div key={index}>
-        <FlatButtonSimple function={addList} name={name} />
+        <FlatButtonSimple function={props.addList} name={name} />
       </div>
     )
   })
